@@ -1,0 +1,58 @@
+{
+  "name": "@layers/amba",
+  "version": "0.1.0",
+  "description": "amba — agent-native backend-as-a-service. Functions, collections, storage, AI gateway, email, queues, sites — one CLI, per-tenant Postgres + Cloudflare edge. `npx amba init` to start.",
+  "type": "module",
+  "bin": {
+    "amba": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "homepage": "https://amba.dev",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/layers/amba-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/layers/amba-cli/issues"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "amba",
+    "baas",
+    "backend",
+    "cli",
+    "cloudflare-workers",
+    "neon",
+    "postgres",
+    "agent",
+    "functions",
+    "collections"
+  ],
+  "scripts": {
+    "build": "tsdown",
+    "dev": "tsdown --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "pnpm run clean && pnpm run build"
+  },
+  "dependencies": {
+    "commander": "^13.1.0",
+    "esbuild": "^0.24.2",
+    "open": "^10.1.2",
+    "picocolors": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "tsdown": "^0.12.5",
+    "typescript": "^5.8.3"
+  }
+}
