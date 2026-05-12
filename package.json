@@ -1,6 +1,6 @@
 {
   "name": "@layers/amba",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "amba — agent-native backend-as-a-service. Functions, collections, storage, AI gateway, email, queues, sites — one CLI, per-tenant Postgres + Cloudflare edge. `npx amba init` to start.",
   "type": "module",
   "bin": {
@@ -38,7 +38,7 @@
     "collections"
   ],
   "scripts": {
-    "build": "tsdown",
+    "build": "tsdown && tsc --emitDeclarationOnly",
     "dev": "tsdown --watch",
     "typecheck": "tsc --noEmit",
     "clean": "rm -rf dist",
